@@ -96,6 +96,7 @@ user_pref("browser.uitour.enabled", false);
 user_pref("dom.disable_window_move_resize", true);
 /* Use only Https mode */
 user_pref("dom.security.https_only_mode", true);
+user_pref("security.mixed_content.block_display_content", true);
 /* Disable Https Background Request */
 user_pref("dom.security.https_only_mode_send_http_background_request", false);
 /* Disable Pocket */
@@ -161,7 +162,7 @@ user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", "0");
 user_pref("network.auth.subresource-http-auth-allow", "1");
 /* Disable TLS 0rrt_data */
 user_pref("security.tls.enable_0rtt_data", false);
-/* Block all sha-1 requests (SHA-1 is no longer maintained */
+/* Block all SHA-1 requests (SHA-1 is no longer maintained */
 user_pref("security.pki.sha1_enforcement_level", "1");
 /* Enable CRLite */
 user_pref("security.remote_settings.crlite_filters.enabled", true);
