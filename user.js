@@ -1,6 +1,6 @@
 /********\
 
-* Title: FixFox.js 1.0.0
+* Title: CleanFox.js 1.0.0
 
 * Copyright 2022 Mikyn
 
@@ -16,15 +16,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 /* Disable accessibility services */
 user_pref("accessibility.force_disabled", 1);
-/* Remove about:config warn screen */
+/* Remove about:config warning screen */
 user_pref("browser.aboutConfig.showWarning", false);
-/* Remove about:protections Annyoances */
+/* Remove about:protections Annoyances */
 user_pref("browser.contentblocking.report.vpn.enabled", false);
 user_pref("browser.contentblocking.report.show_mobile_app", false);
 user_pref("browser.contentblocking.report.monitor.enabled", false);
 user_pref("browser.contentblocking.report.lockwise.enabled", false);
 user_pref("browser.contentblocking.report.hide_vpn_banner", true);
-/* Disable New Tab Annyoances*/
+/* Disable New Tab Annoyances */
 user_pref("browser.newtabpage.activity-stream.asrouter.disable-captive-portal-vpn-promo", true);
 user_pref("browser.newtabpage.activity-stream.asrouter.providers.cfr", "");
 user_pref("browser.newtabpage.activity-stream.asrouter.providers.message-groups", "");
@@ -63,7 +63,7 @@ user_pref("browser.vpn_promo.enabled", false);
 /* Hide MFM Button from about:preferences */
 user_pref("browser.preferences.moreFromMozilla", false);
 
-/* Telemetry/Stuides/Crash Reports */
+/* Telemetry/Studies/Crash Reports */
 
 user_pref("toolkit.telemetry.archive.enabled", false);
 user_pref("toolkit.telemetry.bhrPing.enabled", false);
@@ -104,7 +104,7 @@ user_pref("extensions.pocket.onSaveRecs", false);
 user_pref("extensions.pocket.showHome", false);
 /* Change Geo Provider URL */
 user_pref("geo.provider.network.url", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
-/* Reveal Punycode */
+/* Show Punycode */
 user_pref("network.IDN_show_punycode", true);
 /* Cookie Settings */
 user_pref("network.cookie.sameSite.laxByDefault", true);
@@ -161,7 +161,7 @@ user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", "0");
 user_pref("network.auth.subresource-http-auth-allow", "1");
 /* Disable TLS 0rrt_data */
 user_pref("security.tls.enable_0rtt_data", false);
-/* Block all SHA-1 Requests (SHA-1 is no more mainted) */
+/* Block all sha-1 requests (SHA-1 is no longer maintained */
 user_pref("security.pki.sha1_enforcement_level", "1");
 /* Enable CRLite */
 user_pref("security.remote_settings.crlite_filters.enabled", true);
@@ -169,7 +169,7 @@ user_pref("security.pki.crlite_mode", "2");
 /* Autoplay Settings */
 user_pref("media.autoplay.blocking_policy", "2");
 user_pref("media.autoplay.default", "5");
-/* Disable new sponsored things in new tab */
+/* Disable new sponsored shortcuts */
 user_pref("browser.topsites.contile.enabled", false);
 
 /* Features */
