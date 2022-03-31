@@ -171,6 +171,9 @@ user_pref("media.autoplay.blocking_policy", "2");
 user_pref("media.autoplay.default", "5");
 /* Disable new sponsored shortcuts */
 user_pref("browser.topsites.contile.enabled", false);
+/* Referer Settings */
+user_pref("network.http.referer.XOriginPolicy", "2");
+user_pref("network.http.referer.XOriginTrimmingPolicy", "2");
 
 /* Features */
 
@@ -202,3 +205,4 @@ user_pref("browser.display.use_system_colors", false);
 user_pref("browser.startup.homepage.abouthome_cache.enabled", true);
 user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
 user_pref("network.proxy.socks_remote_dns", true);
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
