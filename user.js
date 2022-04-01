@@ -18,8 +18,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 user_pref("accessibility.force_disabled", 1);
 /* Remove about:config warning screen */
 user_pref("browser.aboutConfig.showWarning", false);
-/* Disable about:welcome */
-user_pref("browser.aboutwelcome.enabled", false);
 /* Disable Whats new */
 user_pref("browser.messaging-system.whatsNewPanel.enabled", false);
 /* Remove about:protections Annoyances */
@@ -53,8 +51,10 @@ user_pref("browser.newtabpage.activity-stream.showSponsored", false);
 user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry.structuredIngestion.endpoint", "");
-/* Remove Google Pinned from Shortcuts */
+/* Remove Pinned Shortcuts */
 user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.havePinned", "");
+user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts", false);
+user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.searchEngines", "");
 /* Remove PartnerLink */
 user_pref("browser.partnerlink.attributionURL", "");
 user_pref("browser.partnerlink.campaign.topsites", "");
@@ -131,7 +131,8 @@ user_pref("pdfjs.enableScripting", false);
 user_pref("privacy.partition.network_state.ocsp_cache", true);
 user_pref("privacy.partition.serviceWorkers", true);
 user_pref("privacy.query_stripping.enabled", true);
-user_pref("privacy.resistFingerprinting", false); ! Breakage !
+user_pref("privacy.query_stripping.strip_list", "bsft_clkid bsft_eid bsft_mid bsft_uid bsft_aaid bsft_ek gbraid wbraid gclsrc gclid yclid utm_campaign utm_channel utm_cid utm_content utm_id utm_medium utm_name utm_place utm_pubreferrer utm_reader utm_referrer utm_serial utm_social utm_social-type utm_source utm_swu utm_term utm_userid utm_viz_id utm_product utm_campaignid utm_ad utm_brand utm_emcid utm_emmid utm_umguk fb_action_ids fb_action_types fb_comment_id fb_ref fb_source fbclid")
+user_pref("privacy.resistFingerprinting", ); ! Breakage ! // See: https://support.mozilla.org/en-US/kb/firefox-protection-against-fingerprinting
 /* Security Settings */
 user_pref("security.OCSP.require", true);
 user_pref("security.family_safety.mode", 0);
@@ -155,7 +156,7 @@ user_pref("browser.urlbar.quicksuggest.dataCollection.enabled", false);
 user_pref("browser.urlbar.quicksuggest.allowPositionInSuggestions", false);
 user_pref("browser.urlbar.merino.enabled", false);
 /* Pop-up Events (Make Your Own Setup) */
-user_pref("dom.popup_allowed_events", "click dblclick");
+user_pref("dom.popup_allowed_events", "click");
 /* Disable about:addons Recommendations */
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("extensions.getAddons.showPane", false);
@@ -177,9 +178,12 @@ user_pref("media.autoplay.blocking_policy", "2");
 user_pref("media.autoplay.default", "5");
 /* Disable new sponsored shortcuts */
 user_pref("browser.topsites.contile.enabled", false);
+user_pref("browser.topsites.contile.endpoint", "");
 /* Referer Settings */
 user_pref("network.http.referer.XOriginPolicy", "2");
 user_pref("network.http.referer.XOriginTrimmingPolicy", "2");
+/* Disable Deprecated RSA_DES_EDE3_SHA */
+user_pref("security.ssl3.deprecated.rsa_des_ede3_sha", false);
 
 /* Features */
 
@@ -195,11 +199,13 @@ user_pref("layout.forms.reveal-password-button.enabled", true);
 user_pref("privacy.userContext.enabled", true);
 user_pref("privacy.userContext.ui.enabled", true);
 user_pref("browser.xul.error_pages.expert_bad_cert", true);
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 
 /* Fixes */
 
 user_pref("browser.download.alwaysOpenPanel", false);
 user_pref("browser.download.autohideButton", false);
+user_pref("browser.download.manager.addToRecentDocs", false);
 user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", false);
 user_pref("browser.theme.dark-private-windows", true);
 user_pref("browser.urlbar.trimURLs", false);
@@ -211,4 +217,3 @@ user_pref("browser.display.use_system_colors", false);
 user_pref("browser.startup.homepage.abouthome_cache.enabled", true);
 user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
 user_pref("network.proxy.socks_remote_dns", true);
-user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
