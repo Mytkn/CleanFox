@@ -18,6 +18,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 user_pref("accessibility.force_disabled", 1);
 /* Remove about:config warning screen */
 user_pref("browser.aboutConfig.showWarning", false);
+/* Disable about:welcome */
+user_pref("browser.aboutwelcome.enabled", false);
+/* Disable Whats new */
+user_pref("browser.messaging-system.whatsNewPanel.enabled", false);
 /* Remove about:protections Annoyances */
 user_pref("browser.contentblocking.report.vpn.enabled", false);
 user_pref("browser.contentblocking.report.show_mobile_app", false);
@@ -35,12 +39,12 @@ user_pref("browser.newtabpage.activity-stream.asrouter.providers.whats-new-panel
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
 user_pref("browser.newtabpage.activity-stream.default.sites", "");
+user_pref("browser.topsites.useRemoteSetting", false);
 user_pref("browser.newtabpage.activity-stream.discoverystream.config", "");
 user_pref("browser.newtabpage.activity-stream.discoverystream.endpointSpocsClear", "");
 user_pref("browser.newtabpage.activity-stream.discoverystream.endpoints", "");
 user_pref("browser.newtabpage.activity-stream.feeds.recommendationprovider", false);
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
-user_pref("browser.newtabpage.activity-stream.feeds.section.topstories.options", "");
 user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.logowordmark.alwaysVisible", false);
 user_pref("browser.newtabpage.activity-stream.pocketCta", "");
@@ -49,6 +53,8 @@ user_pref("browser.newtabpage.activity-stream.showSponsored", false);
 user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry.structuredIngestion.endpoint", "");
+/* Remove Google Pinned from Shortcuts */
+user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.havePinned", "");
 /* Remove PartnerLink */
 user_pref("browser.partnerlink.attributionURL", "");
 user_pref("browser.partnerlink.campaign.topsites", "");
@@ -56,8 +62,6 @@ user_pref("browser.partnerlink.campaign.topsites", "");
 user_pref("browser.privatebrowsing.vpnpromourl", "");
 /* Disable Check Default Browser */
 user_pref("browser.shell.checkDefaultBrowser", false);
-/* Disable Top Sites Url Bar Suggestions */
-user_pref("browser.urlbar.suggest.topsites", false);
 /* Remove VPN Promo */
 user_pref("browser.vpn_promo.enabled", false);
 /* Hide MFM Button from about:preferences */
@@ -92,6 +96,7 @@ user_pref("beacon.enabled", false);
 user_pref("browser.contentblocking.category", "strict");
 /* Disable Ui Tour */
 user_pref("browser.uitour.enabled", false);
+user_pref("browser.uitour.url", "");
 /* Prevent scripts from resizing windows */
 user_pref("dom.disable_window_move_resize", true);
 /* Use only Https mode */
@@ -126,7 +131,7 @@ user_pref("pdfjs.enableScripting", false);
 user_pref("privacy.partition.network_state.ocsp_cache", true);
 user_pref("privacy.partition.serviceWorkers", true);
 user_pref("privacy.query_stripping.enabled", true);
-user_pref("privacy.resistFingerprinting", false);                  ! Breakage !
+user_pref("privacy.resistFingerprinting", false); ! Breakage !
 /* Security Settings */
 user_pref("security.OCSP.require", true);
 user_pref("security.family_safety.mode", 0);
