@@ -63,6 +63,7 @@ user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry.structuredIngestion.endpoint", "");
 user_pref("browser.newtabpage.activity-stream.feeds.asrouterfeed", false);
+user_pref("browser.topsites.useRemoteSetting", false);
 // Disable Partner Link
 user_pref("browser.partnerlink.attributionURL", "");
 user_pref("browser.partnerlink.campaign.topsites", "");
@@ -83,6 +84,7 @@ user_pref("browser.urlbar.quicksuggest.allowPositionInSuggestions", false);
 user_pref("browser.urlbar.quicksuggest.shouldShowOnboardingDialog", false);
 // Disable VPN Promo
 user_pref("browser.vpn_promo.enabled", false);
+user_pref("browser.privatebrowsing.vpnpromourl", "");
 // Remove about:addons annoyances
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("extensions.getAddons.showPane", false);
@@ -150,6 +152,7 @@ user_pref("network.cookie.sameSite.laxByDefault", true);
 user_pref("network.cookie.sameSite.noneRequiresSecure", true);
 user_pref("network.cookie.thirdparty.nonsecureSessionOnly", true);
 user_pref("network.cookie.thirdparty.sessionOnly", true);
+user_pref("network.cookie.sameSite.schemeful", true);
 // Disable Prefetch
 user_pref("network.dns.disablePrefetch", true);
 user_pref("network.http.speculative-parallel-limit", "0");
@@ -195,6 +198,7 @@ user_pref("browser.download.alwaysOpenPanel", false);
 user_pref("browser.download.autohideButton", false);
 user_pref("browser.toolbars.bookmarks.showOtherBookmarks", false);
 user_pref("browser.urlbar.trimURLs", false);
+user_pref("browser.display.use_system_colors", false);
 
  // Features
 user_pref("browser.compactmode.show", true);
@@ -205,6 +209,7 @@ user_pref("browser.urlbar.suggest.calculator", true);
 user_pref("browser.menu.showViewImageInfo", true);
 user_pref("image.jxl.enabled", true);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+user_pref("browser.xul.error_pages.expert_bad_cert", true);
 
  // Extras
 user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
