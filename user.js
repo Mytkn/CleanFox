@@ -1,7 +1,7 @@
  // General
 
 // Disable Accessibility Services //
-user_Pref("accessibility.force_disabled", "1");
+user_Pref("accessibility.force_disabled", 1);
 // Remove about:config warning
 user_pref("browser.aboutConfig.showWarning", false);
 // Remove about:protections Annoyances
@@ -131,7 +131,7 @@ user_pref("datareporting.policy.dataSubmissionEnabled", false);
 // Disable Beacon
 user_pref("beacon.enabled", false);
 // Set Content Blocking to Custom
-user_pref("browser.contentblocking.category", "custom");
+user_pref("browser.contentblocking.category", "strict");
 // Disable Battery API
 user_pref("dom.battery.enabled", false);
 // Disable Google Safe Browsing (Downloads)
@@ -144,9 +144,7 @@ user_pref("browser.safebrowsing.downloads.remote.enabled", false);
 // Disable Http Background Request
 user_pref("dom.security.https_only_mode_send_http_background_request", false);
 // Change Geo Provider
-user_pref("geo.provider.network.url", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
-// Block Third Party Cookies 
-user_pref("network.cookie.cookieBehavior", "1");
+user_pref("geo.provider.network.url", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%")
 // Cookie Settings
 user_pref("network.cookie.sameSite.laxByDefault", true);
 user_pref("network.cookie.sameSite.noneRequiresSecure", true);
@@ -155,12 +153,12 @@ user_pref("network.cookie.thirdparty.sessionOnly", true);
 user_pref("network.cookie.sameSite.schemeful", true);
 // Disable Prefetch
 user_pref("network.dns.disablePrefetch", true);
-user_pref("network.http.speculative-parallel-limit", "0");
+user_pref("network.http.speculative-parallel-limit", 0);
 user_pref("network.predictor.enabled", false);
 user_pref("network.prefetch-next", false);
 // Referer Settings
-user_pref("network.http.referer.XOriginTrimmingPolicy", "2");
-user_pref("network.http.referer.XOriginPolicy", "2");
+user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
+user_pref("network.http.referer.XOriginPolicy", 2);
 // Enable Service Workers Partition
 user_pref("privacy.partition.serviceWorkers", true);
 // Enable Query Stripping
@@ -170,6 +168,7 @@ user_pref("privacy.query_stripping.strip_list", "bsft_clkid bsft_eid bsft_mid bs
 // Enable Containers 
 user_pref("privacy.userContext.enabled", true);
 user_pref("privacy.userContext.ui.enabled", true);
+
 
  // Security
 // Prevent sites to move/resize window
@@ -185,7 +184,7 @@ user_pref("network.IDN_show_punycode", true);
 // Disable PDF Scripting
 user_pref("pdfjs.enableScripting", false);
 // Enforce Crlite Mode
-user_pref("security.pki.crlite_mode", "2");
+user_pref("security.pki.crlite_mode", 2);
 user_pref("security.remote_settings.crlite_filters.enabled", true);
 // Require SSL Safe Negotiation
 user_pref("security.ssl.require_safe_negotiation", true);
