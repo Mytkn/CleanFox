@@ -194,10 +194,9 @@ user_pref("security.mixed_content.block_display_content", true);
 user_pref("network.IDN_show_punycode", true);
 // Disable PDF Scripting
 user_pref("pdfjs.enableScripting", false);
-// Enable CrLite/OCSP
+// Enable CrLite
 user_pref("security.pki.crlite_mode", 2);
 user_pref("security.remote_settings.crlite_filters.enabled", true);
-user_pref("security.OCSP.require", true);
 // Require SSL Safe Negotiation
 user_pref("security.ssl.require_safe_negotiation", true);
 // Disable RSA_DES_EDE3_SHA/0rtt/ Win 8.1 Family Certificate
@@ -206,6 +205,12 @@ user_pref("security.tls.enable_0rtt_data", false);
 user_pref("security.family_safety.mode", 0);
 // Limit Http Auth Credentials Dialogs
 user_pref("network.auth.subresource-http-auth-allow", 1);
+// Disable Password Manager/FormFill/Payments
+user_pref("signon.autofillForms", false);
+user_pref("signon.rememberSignons", false);
+user_pref("browser.formfill.enable", false);
+user_pref("dom.payments.defaults.saveAddress", false);
+user_pref("dom.payments.request.enabled", false);
 
  // Fixes
 user_pref("browser.download.alwaysOpenPanel", false);
