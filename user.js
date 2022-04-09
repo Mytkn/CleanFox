@@ -74,6 +74,14 @@ user_pref("browser.shell.checkDefaultBrowser", false);
 // Disable New Top Sites 
 user_pref("browser.topsites.contile.enabled", false);
 user_pref("browser.topsites.contile.endpoint", "");
+// Disable Suggest
+user_pref("browser.urlbar.merino.enabled")
+user_pref("browser.urlbar.merino.endpointURL", "");
+user_pref("browser.urlbar.quicksuggest.enabled", false);
+user_pref("browser.urlbar.quicksuggest.dataCollection.enabled", false);
+user_pref("browser.urlbar.quicksuggest.remoteSettings.enabled", false);
+user_pref("browser.urlbar.quicksuggest.allowPositionInSuggestions", false);
+user_pref("browser.urlbar.quicksuggest.shouldShowOnboardingDialog", false);
 // Disable VPN Promo
 user_pref("browser.vpn_promo.enabled", false);
 user_pref("browser.privatebrowsing.vpnpromourl", "");
@@ -81,14 +89,24 @@ user_pref("browser.privatebrowsing.vpnpromourl", "");
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("extensions.getAddons.showPane", false);
 user_pref("extensions.getAddons.cache.enabled", false);
-// Disable "Did you mean to go to http://"
-user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", 0);
-
+// Disable Pocket
+user_pref("extensions.pocket.enabled", false);
+// Disable WebCompact Reporter
+user_pref("extensions.webcompat-reporter.enabled", false);
+// Enforce PB Media Memory Cache
+user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
+// Disable "Confirm You Want to leave"
+user_pref("dom.disable_beforeunload", true);
+// Disable Auto-Play
+user_pref("media.autoplay.default", 5);
+user_pref("media.autoplay.blocking_policy", 2);
 
  // Telemetry
 
 // TT (Toolkit Telemetry)
 user_pref("toolkit.coverage.endpoint.base", "");
+user_pref("toolkit.telemetry.coverage.opt-out", true);
+user_pref("toolkit.coverage.opt-out", true);
 user_pref("toolkit.telemetry.archive.enabled", false);
 user_pref("toolkit.telemetry.bhrPing.enabled", false);
 user_pref("toolkit.telemetry.enabled", false);
@@ -137,7 +155,10 @@ user_pref("browser.safebrowsing.downloads.remote.enabled", false);
 user_pref("dom.security.https_only_mode_send_http_background_request", false);
 // Change Geo Provider
 user_pref("geo.provider.network.url", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%")
-// Cookie (TP) Settings
+// Cookie Settings
+user_pref("network.cookie.sameSite.laxByDefault", true);
+user_pref("network.cookie.sameSite.noneRequiresSecure", true);
+user_pref("network.cookie.sameSite.schemeful", true);
 user_pref("network.cookie.thirdparty.nonsecureSessionOnly", true);
 user_pref("network.cookie.thirdparty.sessionOnly", true);
 // Disable Prefetch
@@ -153,33 +174,36 @@ user_pref("privacy.partition.serviceWorkers", true);
 // Enable Query Stripping
 user_pref("privacy.query_stripping.enabled", true);
  // Set Query Stripping List
-user_pref("privacy.query_stripping.strip_list", "bsft_clkid bsft_eid bsft_mid bsft_uid bsft_aaid bsft_ek gbraid wbraid gclsrc gclid yclid utm_campaign utm_channel utm_cid utm_content utm_id utm_medium utm_name utm_place utm_pubreferrer utm_reader utm_referrer utm_serial utm_social utm_social-type utm_swu utm_term utm_userid utm_viz_id utm_product utm_campaignid utm_ad utm_brand utm_emcid utm_emmid utm_umguk fb_action_ids fb_action_types fb_comment_id fb_ref fb_source fbclid");
-// Disable Suggest Data Collection
-user_pref("browser.urlbar.quicksuggest.dataCollection.enabled", false);
+user_pref("privacy.query_stripping.strip_list", "bsft_clkid bsft_eid bsft_mid bsft_uid bsft_aaid bsft_ek gbraid wbraid gclsrc gclid yclid utm_campaign utm_channel utm_cid utm_content utm_id utm_medium utm_name utm_place utm_pubreferrer utm_reader utm_referrer utm_serial utm_social utm_social-type utm_source utm_swu utm_term utm_userid utm_viz_id utm_product utm_campaignid utm_ad utm_brand utm_emcid utm_emmid utm_umguk fb_action_ids fb_action_types fb_comment_id fb_ref fb_source fbclid"); 
+ // Set Query Stripping Allow List 
+user_pref("privacy.query_stripping.allow_list", "sendgb.com plex.tv insurancexblog.blogspot.com toptechtalk.xyz kotaku.com lanacion.com.ar t.send.vt.edu onet.pl");
 
 
 
  // Security
-// Prevent sites to move/resize window
+// Disable Window Moving And Resizing 
 user_pref("dom.disable_window_move_resize", true);
 // Change Pop-up policy
 user_pref("dom.popup_allowed_events", "click");
 // Only Https Mode
 user_pref("dom.security.https_only_mode", true);
 user_pref("security.mixed_content.block_display_content", true);
-user_pref("security.mixed_content.upgrade_display_content", true);
 // Show IDN Punycode
 user_pref("network.IDN_show_punycode", true);
 // Disable PDF Scripting
 user_pref("pdfjs.enableScripting", false);
-// Enforce Crlite Mode
+// Enable CrLite/OCSP
 user_pref("security.pki.crlite_mode", 2);
 user_pref("security.remote_settings.crlite_filters.enabled", true);
+user_pref("security.OCSP.require", true);
 // Require SSL Safe Negotiation
 user_pref("security.ssl.require_safe_negotiation", true);
-// Disable RSA_DES_EDE3_SHA/0rtt 
+// Disable RSA_DES_EDE3_SHA/0rtt/ Win 8.1 Family Certificate
 user_pref("security.ssl3.deprecated.rsa_des_ede3_sha", false);
 user_pref("security.tls.enable_0rtt_data", false);
+user_pref("security.family_safety.mode", 0);
+// Limit Http Auth Credentials Dialogs
+user_pref("network.auth.subresource-http-auth-allow", 1);
 
  // Fixes
 user_pref("browser.download.alwaysOpenPanel", false);
