@@ -74,24 +74,16 @@ user_pref("browser.shell.checkDefaultBrowser", false);
 // Disable New Top Sites 
 user_pref("browser.topsites.contile.enabled", false);
 user_pref("browser.topsites.contile.endpoint", "");
-// Disable Suggest
-user_pref("browser.urlbar.merino.enabled")
-user_pref("browser.urlbar.merino.endpointURL", "");
-user_pref("browser.urlbar.quicksuggest.enabled", false);
-user_pref("browser.urlbar.quicksuggest.dataCollection.enabled", false);
-user_pref("browser.urlbar.quicksuggest.remoteSettings.enabled", false);
-user_pref("browser.urlbar.quicksuggest.allowPositionInSuggestions", false);
-user_pref("browser.urlbar.quicksuggest.shouldShowOnboardingDialog", false);
 // Disable VPN Promo
 user_pref("browser.vpn_promo.enabled", false);
 user_pref("browser.privatebrowsing.vpnpromourl", "");
 // Remove about:addons annoyances
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("extensions.getAddons.showPane", false);
-// Disable Pocket
-user_pref("extensions.pocket.enabled", false);
-// Disable WebCompact Reporter
-user_pref("extensions.webcompat-reporter.enabled", false);
+user_pref("extensions.getAddons.cache.enabled", false);
+// Disable "Did you mean to go to http://"
+user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", 0);
+
 
  // Telemetry
 
@@ -145,12 +137,9 @@ user_pref("browser.safebrowsing.downloads.remote.enabled", false);
 user_pref("dom.security.https_only_mode_send_http_background_request", false);
 // Change Geo Provider
 user_pref("geo.provider.network.url", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%")
-// Cookie Settings
-user_pref("network.cookie.sameSite.laxByDefault", true);
-user_pref("network.cookie.sameSite.noneRequiresSecure", true);
+// Cookie (TP) Settings
 user_pref("network.cookie.thirdparty.nonsecureSessionOnly", true);
 user_pref("network.cookie.thirdparty.sessionOnly", true);
-user_pref("network.cookie.sameSite.schemeful", true);
 // Disable Prefetch
 user_pref("network.dns.disablePrefetch", true);
 user_pref("network.http.speculative-parallel-limit", 0);
@@ -158,16 +147,16 @@ user_pref("network.predictor.enabled", false);
 user_pref("network.prefetch-next", false);
 // Referer Settings
 user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
-user_pref("network.http.referer.XOriginPolicy", 2);
+user_pref("network.http.referer.XOriginPolicy", 1);
 // Enable Service Workers Partition
 user_pref("privacy.partition.serviceWorkers", true);
 // Enable Query Stripping
 user_pref("privacy.query_stripping.enabled", true);
  // Set Query Stripping List
-user_pref("privacy.query_stripping.strip_list", "bsft_clkid bsft_eid bsft_mid bsft_uid bsft_aaid bsft_ek gbraid wbraid gclsrc gclid yclid utm_campaign utm_channel utm_cid utm_content utm_id utm_medium utm_name utm_place utm_pubreferrer utm_reader utm_referrer utm_serial utm_social utm_social-type utm_source utm_swu utm_term utm_userid utm_viz_id utm_product utm_campaignid utm_ad utm_brand utm_emcid utm_emmid utm_umguk fb_action_ids fb_action_types fb_comment_id fb_ref fb_source fbclid");
-// Enable Containers 
-user_pref("privacy.userContext.enabled", true);
-user_pref("privacy.userContext.ui.enabled", true);
+user_pref("privacy.query_stripping.strip_list", "bsft_clkid bsft_eid bsft_mid bsft_uid bsft_aaid bsft_ek gbraid wbraid gclsrc gclid yclid utm_campaign utm_channel utm_cid utm_content utm_id utm_medium utm_name utm_place utm_pubreferrer utm_reader utm_referrer utm_serial utm_social utm_social-type utm_swu utm_term utm_userid utm_viz_id utm_product utm_campaignid utm_ad utm_brand utm_emcid utm_emmid utm_umguk fb_action_ids fb_action_types fb_comment_id fb_ref fb_source fbclid");
+// Disable Suggest Data Collection
+user_pref("browser.urlbar.quicksuggest.dataCollection.enabled", false);
+
 
 
  // Security
@@ -198,6 +187,7 @@ user_pref("browser.download.autohideButton", false);
 user_pref("browser.toolbars.bookmarks.showOtherBookmarks", false);
 user_pref("browser.urlbar.trimURLs", false);
 user_pref("browser.display.use_system_colors", false);
+user_pref("browser.tabs.inTitlebar", 1);
 
  // Features
 user_pref("browser.compactmode.show", true);
@@ -209,8 +199,6 @@ user_pref("browser.menu.showViewImageInfo", true);
 user_pref("image.jxl.enabled", true);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("browser.xul.error_pages.expert_bad_cert", true);
-
- // Extras
-user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
+user_pref("privacy.userContext.ui.enabled", true);
 user_pref("browser.startup.homepage.abouthome_cache.enabled", true);
-user_pref("extensions.getAddons.cache.enabled", false);
+
