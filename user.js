@@ -100,6 +100,8 @@ user_pref("dom.disable_beforeunload", true);
 // Disable Auto-Play
 user_pref("media.autoplay.default", 5);
 user_pref("media.autoplay.blocking_policy", 2);
+// Disable "Did you mean to go to http://"
+user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", 0);
 
  // Telemetry
 
