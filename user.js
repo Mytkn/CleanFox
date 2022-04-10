@@ -1,4 +1,4 @@
- // General
+// Annoyances
 
 // Disable Accessibility Services //
 user_Pref("accessibility.force_disabled", 1);
@@ -74,14 +74,6 @@ user_pref("browser.shell.checkDefaultBrowser", false);
 // Disable New Top Sites 
 user_pref("browser.topsites.contile.enabled", false);
 user_pref("browser.topsites.contile.endpoint", "");
-// Disable Suggest
-user_pref("browser.urlbar.merino.enabled")
-user_pref("browser.urlbar.merino.endpointURL", "");
-user_pref("browser.urlbar.quicksuggest.enabled", false);
-user_pref("browser.urlbar.quicksuggest.dataCollection.enabled", false);
-user_pref("browser.urlbar.quicksuggest.remoteSettings.enabled", false);
-user_pref("browser.urlbar.quicksuggest.allowPositionInSuggestions", false);
-user_pref("browser.urlbar.quicksuggest.shouldShowOnboardingDialog", false);
 // Disable VPN Promo
 user_pref("browser.vpn_promo.enabled", false);
 user_pref("browser.privatebrowsing.vpnpromourl", "");
@@ -89,12 +81,6 @@ user_pref("browser.privatebrowsing.vpnpromourl", "");
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("extensions.getAddons.showPane", false);
 user_pref("extensions.getAddons.cache.enabled", false);
-// Disable Pocket
-user_pref("extensions.pocket.enabled", false);
-// Disable WebCompact Reporter
-user_pref("extensions.webcompat-reporter.enabled", false);
-// Enforce PB Media Memory Cache
-user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
 // Disable "Confirm You Want to leave"
 user_pref("dom.disable_beforeunload", true);
 // Disable Auto-Play
@@ -103,7 +89,30 @@ user_pref("media.autoplay.blocking_policy", 2);
 // Disable "Did you mean to go to http://"
 user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", 0);
 
- // Telemetry
+
+// Features/Fixes
+
+user_pref("browser.compactmode.show", true);
+user_pref("browser.contentblocking.customBlockList.preferences.ui.enabled", true);
+user_pref("browser.search.separatePrivateDefault.ui.enabled", true);
+user_pref("browser.tabs.tabmanager.enabled", true);
+user_pref("browser.urlbar.suggest.calculator", true);
+user_pref("browser.menu.showViewImageInfo", true);
+user_pref("image.jxl.enabled", true);
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+user_pref("browser.xul.error_pages.expert_bad_cert", true);
+user_pref("privacy.userContext.ui.enabled", true);
+user_pref("browser.startup.homepage.abouthome_cache.enabled", true);
+user_pref("signon.management.page.fileImport.enabled", true);
+user_pref("browser.download.alwaysOpenPanel", false);
+user_pref("browser.download.autohideButton", false);
+user_pref("browser.toolbars.bookmarks.showOtherBookmarks", false);
+user_pref("browser.urlbar.trimURLs", false);
+user_pref("browser.display.use_system_colors", false);
+user_pref("browser.tabs.inTitlebar", 1);
+
+
+// Privacy
 
 // TT (Toolkit Telemetry)
 user_pref("toolkit.coverage.endpoint.base", "");
@@ -119,27 +128,21 @@ user_pref("toolkit.telemetry.server_owner", "");
 user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
 user_pref("toolkit.telemetry.unified", false);
 user_pref("toolkit.telemetry.updatePing.enabled", false);
-
 // Ping
 user_pref("browser.ping-centre.telemetry", false);
-
 // Studies
 user_pref("app.normandy.api_url", "");
 user_pref("app.normandy.enabled", false);
 user_pref("app.normandy.shieldLearnMoreUrl", "");
 user_pref("app.shield.optoutstudies.enabled", false);
-
 // Discovery
 user_pref("browser.discovery.enabled", false);
-
 // Crash Report
 user_pref("breakpad.reportURL", "");
 user_pref("browser.tabs.crashReporting.sendReport", false);
 user_pref("datareporting.healthreport.infoURL", "");
 user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
-
- // Privacy 
 // Disable Beacon
 user_pref("beacon.enabled", false);
 // Set Content Blocking to Custom
@@ -171,6 +174,8 @@ user_pref("network.prefetch-next", false);
 // Referer Settings
 user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
 user_pref("network.http.referer.XOriginPolicy", 1);
+user_pref("network.http.sendRefererHeader", 1);
+user_pref("network.http.referer.trimmingPolicy", 2);
 // Enable Service Workers Partition
 user_pref("privacy.partition.serviceWorkers", true);
 // Enable Query Stripping
@@ -179,57 +184,46 @@ user_pref("privacy.query_stripping.enabled", true);
 user_pref("privacy.query_stripping.strip_list", "bsft_clkid bsft_eid bsft_mid bsft_uid bsft_aaid bsft_ek gbraid wbraid gclsrc gclid yclid utm_campaign utm_channel utm_cid utm_content utm_id utm_medium utm_name utm_place utm_pubreferrer utm_reader utm_referrer utm_serial utm_social utm_social-type utm_source utm_swu utm_term utm_userid utm_viz_id utm_product utm_campaignid utm_ad utm_brand utm_emcid utm_emmid utm_umguk fb_action_ids fb_action_types fb_comment_id fb_ref fb_source fbclid"); 
  // Set Query Stripping Allow List 
 user_pref("privacy.query_stripping.allow_list", "sendgb.com plex.tv insurancexblog.blogspot.com toptechtalk.xyz kotaku.com lanacion.com.ar t.send.vt.edu onet.pl");
+// Disable Suggest Data Collection
+user_pref("browser.urlbar.quicksuggest.dataCollection.enabled", false);
+user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false)	
+user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false)
 
 
+// Security
 
- // Security
 // Disable Window Moving And Resizing 
 user_pref("dom.disable_window_move_resize", true);
 // Change Pop-up policy
 user_pref("dom.popup_allowed_events", "click");
 // Only Https Mode
 user_pref("dom.security.https_only_mode", true);
-user_pref("security.mixed_content.block_display_content", true);
+user_pref("security.mixed_content.upgrade_display_content", true);
 // Show IDN Punycode
 user_pref("network.IDN_show_punycode", true);
 // Disable PDF Scripting
 user_pref("pdfjs.enableScripting", false);
-// Enable CrLite
+// Enable CrLite/OCSP
 user_pref("security.pki.crlite_mode", 2);
 user_pref("security.remote_settings.crlite_filters.enabled", true);
+user_pref("security.OCSP.enabled", 1);
+user_pref("security.OCSP.require", true);
 // Require SSL Safe Negotiation
 user_pref("security.ssl.require_safe_negotiation", true);
-// Disable RSA_DES_EDE3_SHA/0rtt/ Win 8.1 Family Certificate
+// Disable Weak SSL3/TLS/Certificates
 user_pref("security.ssl3.deprecated.rsa_des_ede3_sha", false);
+user_pref("security.ssl3.rsa_aes_256_sha", false);
+user_pref("security.ssl3.rsa_aes_256_gcm_sha384", false);
+user_pref("security.ssl3.rsa_aes_128_sha", false);
+user_pref("security.ssl3.rsa_aes_128_gcm_sha256", false);
+user_pref("security.ssl3.ecdhe_rsa_aes_256_sha", false);
+user_pref("security.ssl3.ecdhe_rsa_aes_128_sha", false);
+user_pref("security.ssl3.ecdhe_ecdsa_aes_256_sha", false);
+user_pref("security.ssl3.ecdhe_ecdsa_aes_128_sha", false);
 user_pref("security.tls.enable_0rtt_data", false);
 user_pref("security.family_safety.mode", 0);
-// Limit Http Auth Credentials Dialogs
-user_pref("network.auth.subresource-http-auth-allow", 1);
-// Disable Password Manager/FormFill/Payments
-user_pref("signon.autofillForms", false);
-user_pref("signon.rememberSignons", false);
-user_pref("browser.formfill.enable", false);
-user_pref("dom.payments.defaults.saveAddress", false);
-user_pref("dom.payments.request.enabled", false);
-
- // Fixes
-user_pref("browser.download.alwaysOpenPanel", false);
-user_pref("browser.download.autohideButton", false);
-user_pref("browser.toolbars.bookmarks.showOtherBookmarks", false);
-user_pref("browser.urlbar.trimURLs", false);
-user_pref("browser.display.use_system_colors", false);
-user_pref("browser.tabs.inTitlebar", 1);
-
- // Features
-user_pref("browser.compactmode.show", true);
-user_pref("browser.contentblocking.customBlockList.preferences.ui.enabled", true);
-user_pref("browser.search.separatePrivateDefault.ui.enabled", true);
-user_pref("browser.tabs.tabmanager.enabled", true);
-user_pref("browser.urlbar.suggest.calculator", true);
-user_pref("browser.menu.showViewImageInfo", true);
-user_pref("image.jxl.enabled", true);
-user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
-user_pref("browser.xul.error_pages.expert_bad_cert", true);
-user_pref("privacy.userContext.ui.enabled", true);
-user_pref("browser.startup.homepage.abouthome_cache.enabled", true);
+// Block All Http Auth Credentials Dialogs
+user_pref("network.auth.subresource-http-auth-allow", 0);
+// Block All SHA1 Requests
+user_pref("security.pki.sha1_enforcement_level", 1);
 
