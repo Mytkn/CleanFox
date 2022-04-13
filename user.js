@@ -69,6 +69,8 @@ user_pref("browser.partnerlink.attributionURL", "");
 user_pref("browser.partnerlink.campaign.topsites", "");
 // Hide MFM Button
 user_pref("browser.preferences.moreFromMozilla", false);
+// Disable Pocket
+user_pref("extensions.pocket.enabled", false);
 // Disable "Check Default Browser"
 user_pref("browser.shell.checkDefaultBrowser", false);
 // Disable New Top Sites 
@@ -81,13 +83,13 @@ user_pref("browser.privatebrowsing.vpnpromourl", "");
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("extensions.getAddons.showPane", false);
 user_pref("extensions.getAddons.cache.enabled", false);
-// Disable "Confirm You Want to leave"
-user_pref("dom.disable_beforeunload", true);
 // Disable Auto-Play
 user_pref("media.autoplay.default", 5);
 user_pref("media.autoplay.blocking_policy", 2);
 // Disable "Did you mean to go to http://"
 user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", 0);
+// Disable Offline Cache
+user_pref("browser.cache.offline.enable", false);
 
 
 // Features/Fixes
@@ -110,6 +112,7 @@ user_pref("browser.toolbars.bookmarks.showOtherBookmarks", false);
 user_pref("browser.urlbar.trimURLs", false);
 user_pref("browser.display.use_system_colors", false);
 user_pref("browser.tabs.inTitlebar", 1);
+
 
 
 // Privacy
@@ -222,8 +225,4 @@ user_pref("security.ssl3.ecdhe_ecdsa_aes_256_sha", false);
 user_pref("security.ssl3.ecdhe_ecdsa_aes_128_sha", false);
 user_pref("security.tls.enable_0rtt_data", false);
 user_pref("security.family_safety.mode", 0);
-// Block All Http Auth Credentials Dialogs
-user_pref("network.auth.subresource-http-auth-allow", 0);
-// Block All SHA1 Requests
-user_pref("security.pki.sha1_enforcement_level", 1);
 
